@@ -63,73 +63,67 @@ export default function SafeRoadPage() {
 
   return (
     <main className="text-white px-4 md:px-8 lg:px-12 py-12 max-w-5xl mx-auto">
-     {/* Hero Section – responsive, Android-friendly */}
+      {/* Hero Section – responsive, Android-friendly */}
 
+      {/* Full-width Hero Section with dark green top & bottom blend */}
+      <section className="relative w-screen left-[50%] right-[50%] -mx-[50vw] overflow-hidden mb-10 md:mb-12">
+        {/* Aspect ratio responsive */}
+        <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] min-h-[260px] md:min-h-[500px]">
+          <Image
+            src="/images/saferoad/s7.PNG"
+            alt="SafeRoad app showing risk zones on map"
+            fill
+            priority
+            className="object-cover brightness-75"
+            sizes="100vw"
+          />
 
-{/* Full-width Hero Section with dark green top & bottom blend */}
-<section className="relative w-screen left-[50%] right-[50%] -mx-[50vw] overflow-hidden mb-10 md:mb-12">
-  {/* Aspect ratio responsive */}
-  <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] min-h-[260px] md:min-h-[500px]">
-    <Image
-      src="/images/saferoad/s7.PNG"
-      alt="SafeRoad app showing risk zones on map"
-      fill
-      priority
-      className="object-cover brightness-75"
-      sizes="100vw"
-    />
+          {/* Top gradient (dark green → transparent) */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#03110f] via-[#03110f]/60 to-transparent pointer-events-none" />
 
-    {/* Top gradient (dark green → transparent) */}
-    <div className="absolute inset-0 bg-gradient-to-b from-[#03110f] via-[#03110f]/60 to-transparent pointer-events-none" />
+          {/* Bottom gradient (dark green → transparent) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#03110f] via-[#03110f]/60 to-transparent pointer-events-none" />
 
-    {/* Bottom gradient (dark green → transparent) */}
-    <div className="absolute inset-0 bg-gradient-to-t from-[#03110f] via-[#03110f]/60 to-transparent pointer-events-none" />
-
-    {/* Content */}
-    <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1
-          className="
+          {/* Content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
+            <div className="max-w-4xl mx-auto">
+              <h1
+                className="
             font-bold text-white drop-shadow-lg [text-wrap:balance]
             leading-tight sm:leading-snug md:leading-normal
             text-[clamp(22px,6vw,48px)] max-[360px]:text-[20px]
           "
-        >
-          SafeRoad – Moose Warning App
-        </h1>
+              >
+                SafeRoad – Moose Warning App
+              </h1>
 
-        <p
-          className="
+              <p
+                className="
             mt-3 md:mt-4 max-w-[40rem] md:max-w-[48rem] text-gray-200 [text-wrap:balance]
             leading-snug sm:leading-normal
             text-[clamp(13px,3.8vw,18px)] max-[360px]:text-[12.5px]
             mx-auto
           "
-        >
-          Real-time moose sightings and smart road safety alerts — powered by
-          community data, geolocation, and Firebase.
-        </p>
+              >
+                Real-time moose sightings and smart road safety alerts — powered
+                by community data, geolocation, and Firebase.
+              </p>
 
-        <div className="mt-6 md:mt-8 flex flex-wrap gap-2 md:gap-3 justify-center">
-          <Link
-            href="https://github.com/torpeforsten"
-            className="px-4 py-2 md:px-5 md:py-2.5 rounded-lg border border-gray-300 text-white hover:bg-white hover:text-black transition text-sm md:text-base"
-          >
-            View on GitHub (Not public yet)
-          </Link>
+              <div className="mt-6 md:mt-8 flex flex-wrap gap-2 md:gap-3 justify-center">
+                <Link
+                  href="https://github.com/torpeforsten"
+                  className="px-4 py-2 md:px-5 md:py-2.5 rounded-lg border border-gray-300 text-white hover:bg-white hover:text-black transition text-sm md:text-base"
+                >
+                  View on GitHub (Not public yet)
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  {/* Subtle bottom fade to green background */}
-  <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-[#03110f] via-[#03110f]/90 to-transparent pointer-events-none" />
-</section>
-
-
-
-
-
+        {/* Subtle bottom fade to green background */}
+        <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-[#03110f] via-[#03110f]/90 to-transparent pointer-events-none" />
+      </section>
       {/* Overview */}
       <section className="mb-10 space-y-4">
         <h2 className="text-2xl font-bold">Overview</h2>
